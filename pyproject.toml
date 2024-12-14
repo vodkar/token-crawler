@@ -1,0 +1,30 @@
+[tool.poetry]
+name = "token-crawler"
+version = "0.1.0"
+description = ""
+authors = ["vodkar <boombarah@gmail.com>"]
+readme = "README.md"
+packages = []
+
+[tool.poetry.dependencies]
+python = "^3.12"
+openai = "^1.57.0"
+requests = "^2.32.3"
+ratelimit = "^2.2.1"
+
+[tool.poetry.group.dev.dependencies]
+mypy = "^1.13.0"
+ruff = "^0.8.2"
+isort = "^5.13.2"
+types-requests = "^2.32.0.20241016"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.isort]
+profile = "black"
+
+[[tool.mypy.overrides]]
+module = ["ratelimit"]
+ignore_missing_imports = true
